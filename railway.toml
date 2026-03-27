@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "cd backend && ./gradlew build -x test"
+
+[deploy]
+startCommand = "java -jar backend/build/libs/shop-0.0.1-SNAPSHOT.jar"
+healthcheckPath = "/api/products"
+restartPolicyType = "ON_FAILURE"

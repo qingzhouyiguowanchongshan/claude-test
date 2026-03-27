@@ -1,11 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/shop
-    username: shop
-    password: shop
+    url: jdbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:shop}
+    username: ${PGUSER:shop}
+    password: ${PGPASSWORD:shop}
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     defer-datasource-initialization: true
   sql:
     init:
@@ -21,4 +21,4 @@ spring:
       mail.smtp.starttls.enable: true
 
 server:
-  port: 8080
+  port: ${PORT:8080}
