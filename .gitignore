@@ -1,0 +1,23 @@
+# Claude Code local config
+.claude/
+
+# Gradle
+backend/.gradle/
+backend/build/
+backend/out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+/tmp/
+
+# Environment / secrets
+.env
+*.env
