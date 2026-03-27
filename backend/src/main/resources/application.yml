@@ -4,6 +4,7 @@ spring:
     username: ${PGUSER:shop}
     password: ${PGPASSWORD:shop}
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     defer-datasource-initialization: true
